@@ -1,9 +1,9 @@
 import discord
 import random
 from discord.ext import commands
-import emb
+import reddit
 
-cogs = [emb,]
+cogs = [reddit,]
 
 client = commands.Bot(command_prefix='?', intents = discord.Intents.all())
 
