@@ -17,18 +17,17 @@ class emb(commands.Cog):
   async def red(self,ctx,subred= "memes"):
     
     subreddit = reddit.subreddit(subred)
-
     subsarray=[]
 
-    for submission in subreddit.top(limit = 10):
+    for submission in subreddit.top(limit = 50):
       subsarray.append(submission)
-
 
     randomsub = random.choice(subsarray)
     name = randomsub.title 
     url = randomsub.url
 
     embed = discord.Embed(title = name)
+    embed.set_image(url = url)
 
     embed.set_footer(text = "Requested by " + str(ctx.author.name))
     

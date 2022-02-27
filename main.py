@@ -5,7 +5,7 @@ import reddit
 
 cogs = [reddit,]
 
-client = commands.Bot(command_prefix='?', intents = discord.Intents.all())
+client = commands.Bot(command_prefix='=', intents = discord.Intents.all())
 
 
 for i in range (len(cogs)):
