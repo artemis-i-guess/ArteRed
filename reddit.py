@@ -11,14 +11,6 @@ class emb(commands.Cog):
 
   def __init__(self, client):
     self.client = client
- 
-
-  @commands.command()
-  async def pfp(self,ctx,member:discord.Member):
-    embed = discord.Embed(title = member.name, color = discord.Color.purple())
-    urluser = str(member.avatar_url)
-    embed.set_image(url = urluser)
-    await ctx.send(embed=embed)
 
 
   @commands.command()
@@ -37,9 +29,8 @@ class emb(commands.Cog):
     url = randomsub.url
 
     embed = discord.Embed(title = name)
-    embed.set_image(url = url)
 
-    embed.set_footer(icon_url = ctx.author.avatar_url, text = "Requested by " + str(ctx.author.name))
+    embed.set_footer(text = "Requested by " + str(ctx.author.name))
     
     await ctx.send(embed=embed)
 
