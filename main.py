@@ -2,6 +2,12 @@ import discord
 import random
 from discord.ext import commands
 import reddit
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 cogs = [reddit,]
 
@@ -25,4 +31,4 @@ async def pfp(self,ctx,member:discord.member):
    embed.set_thumbnail(url=member.avatar)
    await ctx.send(embed=embed)
 
-client.run('OTQ3NDkwNjY4NTA1MzM3ODU2.YhuBcg.TK1tJlbgZR8y95GQW5-Hvgo9yyA')
+client.run(BOT_TOKEN)
